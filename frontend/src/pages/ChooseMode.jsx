@@ -32,8 +32,8 @@ function ChooseMode() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-custom-yellow">
-      <main className="container p-8">
+    <div className="flex layout-height justify-center items-center bg-custom-yellow">
+      <main className="container">
         <div className="grid grid-cols-1 md:grid-cols-3">
           {modes.map((mode, index) => (
             <Mode key={index} {...mode} />

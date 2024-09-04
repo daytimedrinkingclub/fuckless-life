@@ -10,50 +10,7 @@ body {
   background-color: #f4f4f4;
   line-height: 1.6;
 }
-/* .lexend-deca-400 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.lexend-deca-500 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+.layout-height {
+  min-height: calc(100vh - 132px);
 }
-
-.lexend-deca-600 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.lexend-deca-700 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lexend-deca-800 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.lexend-deca-900 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.goblin-one-regular {
-  font-family: "Goblin One", serif;
-  font-weight: 400;
-  font-style: normal;
-} */
