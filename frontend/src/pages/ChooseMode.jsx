@@ -27,7 +27,8 @@ function ChooseMode() {
       description:
         "Free ka gyan hai, lelo (not affiliated with Cal Newport or Naval Ravikant)",
       bgColor: "#DEC879", // Gold color
-      path: "/blogs",
+      path: "https://x.com/NeelSeth7",
+      external: true,
     },
   ];
 
