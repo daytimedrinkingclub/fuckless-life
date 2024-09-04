@@ -6,7 +6,7 @@ function TermsPage() {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <div className="bg-custom-yellow min-h-screen flex flex-col">
+    <div className="bg-custom-yellow layout-height flex flex-col">
       <main className="flex-grow flex items-center p-8">
         <div className="max-w-2xl">
           <div className="p-4 rounded-lg mb-6">
@@ -36,22 +36,24 @@ function TermsPage() {
               </li>
             </ul>
           </div>
-          <div className="flex items-center justify-between">
-            <label className="flex items-center">
-              <input 
-                type="checkbox" 
-                className="mr-2 accent-black" 
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <label className="flex items-center mb-4 sm:mb-0">
+              <input
+                type="checkbox"
+                className="mr-2 accent-black"
                 checked={isChecked}
                 onChange={(e) => setIsChecked(e.target.checked)}
               />
               <span className="font-goblin">
-                I get it, let's move onto the good stuff
+                I get it, let&apos;s move onto the good stuff
               </span>
             </label>
             <Link
               to="/choose-mode"
-              className={`inline-block bg-mybrown text-white px-8 py-3 rounded-full text-xl font-bold mt-4 transition-colors font-lexend-exa ${
-                isChecked ? 'hover:bg-opacity-80' : 'opacity-50 cursor-not-allowed'
+              className={`inline-block bg-mybrown text-white px-8 py-3 rounded-full text-xl font-bold mt-4 sm:mt-0 transition-colors font-lexend-exa max-w-[150px] ${
+                isChecked
+                  ? "hover:bg-opacity-80"
+                  : "opacity-50 cursor-not-allowed"
               }`}
               onClick={(e) => !isChecked && e.preventDefault()}
             >

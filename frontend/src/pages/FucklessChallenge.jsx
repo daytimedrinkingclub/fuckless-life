@@ -22,10 +22,10 @@ const StartChallenge = ({ onStartChallenge }) => (
   </div>
 );
 
-const ViewChallenge = ({ text }) => (
+const ViewChallenge = ({ text, onMoreChallenge }) => (
   <div className="container">
     <div
-      className="relative w-full max-w-md mx-auto rounded-xl"
+      className="relative w-full max-w-md mx-auto rounded-xl pb-8"
       style={{ background: "#B19532" }}
     >
       <img
@@ -33,8 +33,14 @@ const ViewChallenge = ({ text }) => (
         alt="Fortune Message"
         className="w-full h-auto"
       />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <p className="transform rotate-[-7deg] mb-2 ml-1">{text}</p>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <p className="transform rotate-[-7deg] mb-10 ml-1">{text}</p>
+        <button
+          className="mt-4 absolute bottom-5 text-sm inline-block bg-mybrown text-white px-4 py-2 rounded-full font-bold hover:bg-opacity-80 transition-colors font-lexend-exa"
+          onClick={onMoreChallenge}
+        >
+          More Challenge
+        </button>
       </div>
       <button
         className="absolute top-2 right-2 rounded-full p-2"
@@ -92,6 +98,10 @@ function FucklessChallenges() {
     setShowChallenge(true);
   };
 
+  const handleMoreChallenge = () => {
+    setShowChallenge(false);
+  };
+
   return (
     <div
       className="flex layout-height w-100 justify-center items-center bg-custom-yellow"
@@ -104,7 +114,10 @@ function FucklessChallenges() {
       {!showChallenge ? (
         <StartChallenge onStartChallenge={handleStartChallenge} />
       ) : (
-        <ViewChallenge text={challengeText} />
+        <ViewChallenge
+          text={challengeText}
+          onMoreChallenge={handleMoreChallenge}
+        />
       )}
     </div>
   );

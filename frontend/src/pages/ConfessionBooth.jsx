@@ -75,20 +75,20 @@ function ConfessionBooth() {
   return (
     <div className="bg-custom-yellow">
       <div className="flex justify-center items-center">
-        <main className="w-full max-w-4xl">
+        <main className="w-full max-w-4xl p-4">
           <h1 className="text-4xl font-bold text-center mb-6">
             Confession Booth
           </h1>
           <div className="flex flex-col md:flex-row h-full">
             <section className="flex-1 p-4 relative">
               <img src={confessImage} alt="Confession booth" />
-              <div className="absolute top-1/2  ml-5 mt-6 max-w-[140px] left-1/2 transform text-white text-center">
+              <div className="absolute top-1/2  ml-4 mt-6 max-w-[130px] left-1/2 transform text-white text-center">
                 <p className="text-sm font-bold animate-fade-in-out text-mybrown font-goblin transform rotate-[-2deg]">
                   {tvMessage}
                 </p>
               </div>
             </section>
-            <section className="flex-1 p-4 mx-12 bg-custom-yellow flex flex-col justify-center">
+            <section className="flex-1 p-4 sm:mx-12 bg-custom-yellow flex flex-col justify-center">
               <p className="text-2xl font-lexend-exa mb-2">
                 Ever done something and thought,{" "}
                 <span className="font-bold">&ldquo;Well, fuck it!&rdquo;?</span>{" "}
@@ -125,12 +125,9 @@ function ConfessionBooth() {
                 </div>
               </form>
               {showAlert && (
-                <div className="mb-4 p-2 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative animate-bounce">
-                  <strong className="font-bold">Confession received! </strong>
-                  <span className="block sm:inline">
-                    Your secret is safe with us. 🤐
-                  </span>
-                </div>
+                <p className="mt-4 text-green-700 font-bold text-center">
+                  Confession received!
+                </p>
               )}
             </section>
           </div>
