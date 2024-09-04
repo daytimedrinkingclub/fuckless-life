@@ -3,7 +3,7 @@ import React from "react";
 function Mode({ image, title, description, bgColor, onClick }) {
   return (
     <div
-      className="flex flex-col items-center p-4 rounded-lg cursor-pointer transition-transform hover:scale-105"
+      className="flex flex-col items-center p-4 rounded-lg cursor-pointer transition-transform hover:scale-105 text-black text-center"
       style={{ backgroundColor: bgColor }}
       onClick={onClick}
     >
