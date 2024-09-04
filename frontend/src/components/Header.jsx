@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 
@@ -7,7 +8,9 @@ const Header = () => {
   return (
     <div className="bg-header-bg py-3 px-6 border-b-[20px] border-[#010101]">
       <div className="flex justify-between items-center">
-        <img src={logo} alt="Logo" className="w-[188px] h-[80px]" />
+        <Link to="/">
+          <img src={logo} alt="Logo" className="w-[190px] h-[88px]" />
+        </Link>
         {/* Navigation menu for desktop */}
         <nav className="hidden lg:flex items-center">
           <a
