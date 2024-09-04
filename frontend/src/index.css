@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Lexend+Deca:wght@100..900&display=swap&family=Lexend+Exa:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lexend Exa', sans-serif;
+  color: #000000;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+/* .lexend-deca-400 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lexend-deca-500 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.lexend-deca-600 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.lexend-deca-700 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lexend-deca-800 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.lexend-deca-900 {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.goblin-one-regular {
+  font-family: "Goblin One", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
