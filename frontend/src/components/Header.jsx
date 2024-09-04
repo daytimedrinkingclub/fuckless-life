@@ -11,22 +11,24 @@ const Header = () => {
         <Link to="/">
           <img src={logo} alt="Logo" className="w-[190px] h-[88px]" />
         </Link>
-        {/* Navigation menu for desktop */}
         <nav className="hidden lg:flex items-center">
           <a
-            href="/about"
+            href="https://daytimedrinking.club"
+            target="_blank"
             className="text-black font-bold text-lg mr-6 hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
           >
             About Us
           </a>
           <a
-            href="/merch"
+            href="https://okat.store"
+            target="_blank"
             className="text-black font-bold text-lg mr-6 hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
           >
             Merch
           </a>
           <a
-            href="/podcast"
+            href="https://www.youtube.com/@DaytimeDrinkingClub"
+            target="_blank"
             className="text-black font-bold text-lg hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
           >
             Podcast
@@ -55,9 +57,7 @@ const Header = () => {
       </div>
       {/* Navigation menu for mobile */}
       <nav
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } lg:hidden flex-col mt-4`}
+        className={`${isMenuOpen ? "flex" : "hidden"} lg:hidden flex-col mt-4`}
       >
         <a
           href="/about"

@@ -11,7 +11,7 @@ function ChooseMode() {
       description:
         "post notes about what you’ve stopped caring about and let the world know you’re living fuckless.",
       bgColor: "#B19532",
-      onClick: () => console.log("Confession Booth clicked"),
+      path: "/confession-booth",
     },
     {
       image: fucklessChallengesImage,
@@ -19,7 +19,7 @@ function ChooseMode() {
       description:
         "Kursi ki peti baandh lijiye and master the art of letting go, one small step at a time.",
       bgColor: "#D2AB21", // Gold color
-      onClick: () => console.log("Fuckless Challenges clicked"),
+      path: "/fuckless-challenges",
     },
     {
       image: blogsImage,
@@ -27,7 +27,7 @@ function ChooseMode() {
       description:
         "Free ka gyan hai, lelo (not affiliated with Cal Newport or Naval Ravikant)",
       bgColor: "#DEC879", // Gold color
-      onClick: () => console.log("Blogs clicked"),
+      path: "/blogs",
     },
   ];
 
