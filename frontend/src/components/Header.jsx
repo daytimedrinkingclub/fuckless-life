@@ -69,19 +69,21 @@ const Header = () => {
         className={`${isMenuOpen ? "flex" : "hidden"} lg:hidden flex-col mt-4`}
       >
         <a
-          href="/about"
+          href="https://daytimedrinking.club"
+          target="_blank"
           className="text-black font-bold text-lg mb-2 hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
         >
           About Us
         </a>
         <a
-          href="/merch"
+          href="https://okat.store"
+          target="_blank"
           className="text-black font-bold text-lg mb-2 hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
         >
           Merch
         </a>
         <a
-          href="/podcast"
+          href="https://www.youtube.com/@DaytimeDrinkingClub"
           className="text-black font-bold text-lg mb-2 hover:text-gray-700 transition-colors duration-300 leading-[38px] text-[30px] font-[700]"
         >
           Podcast

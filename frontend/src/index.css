@@ -9,6 +9,7 @@ body {
   color: #000000;
   background-color: #f4f4f4;
   line-height: 1.6;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewport="0 0 100 100" style="fill:black;font-size:24px;"><text y="50%">🖕</text></svg>') 16 0, auto;
 }
 
 .layout-height {
@@ -29,4 +30,181 @@ body {
 
 .my-masonry-grid_column > div {
   margin-bottom: 30px;
+}
+
+.fire-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ff4500'/%3E%3Cstop offset='1' stop-color='%23ff8c00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-size: cover;
+  animation: fire 8s ease infinite;
+}
+
+@keyframes fire {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.melting-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #D2AC21;
+  overflow: hidden;
+}
+
+.melting-element {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: melt 10s infinite;
+}
+
+.melting-element:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  left: 10%;
+  top: -50px;
+  animation-delay: 0s;
+}
+
+.melting-element:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  left: 30%;
+  top: -75px;
+  animation-delay: 2s;
+}
+
+.melting-element:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: -40px;
+  animation-delay: 4s;
+}
+
+.melting-element:nth-child(4) {
+  width: 120px;
+  height: 120px;
+  left: 70%;
+  top: -60px;
+  animation-delay: 6s;
+}
+
+.melting-element:nth-child(5) {
+  width: 90px;
+  height: 90px;
+  left: 90%;
+  top: -45px;
+  animation-delay: 8s;
+}
+
+@keyframes melt {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(300%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(600%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.smoke-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.smoke-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: smoke 2s forwards;
+}
+
+@keyframes smoke {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(3) translate(0, -100px);
+    opacity: 0;
+  }
+}
+
+/* ... (keep existing styles) ... */
+
+.fire-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.fire-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: fire 1s ease-out forwards;
+}
+
+@keyframes fire {
+  0% {
+    transform: scale(1) rotate(0deg) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(var(--angle)) translate(var(--distance), var(--distance));
+    opacity: 0;
+  }
+}
+
+/* Add a subtle glow effect to the background */
+.bg-custom-yellow {
+  position: relative;
+}
+
+.bg-custom-yellow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 0.2), transparent 70%);
+  pointer-events: none;
 }
