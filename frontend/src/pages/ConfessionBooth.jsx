@@ -146,7 +146,7 @@ function ConfessionBooth() {
           {confessions.map((confession) => (
             <div
               key={confession.id}
-              className="bg-yellow-200 p-4 rounded-lg shadow-md mb-4 transform rotate-1 hover:rotate-0 transition-transform"
+              className="bg-yellow-200 p-4 rounded-lg shadow-md mb-4 transform rotate-1 hover:rotate-0 transition-transform overflow-hidden"
             >
               <p className="text-lg font-medium">{confession.message}</p>
             </div>
