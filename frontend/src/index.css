@@ -30,7 +30,13 @@ body {
 
 .my-masonry-grid_column > div {
   margin-bottom: 30px;
+  text-wrap: wrap;
 }
+
+.my-masonry-grid_column > div > p {
+    overflow-wrap: anywhere;
+}
+
 
 .fire-background {
   position: absolute;
